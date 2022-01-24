@@ -1,0 +1,53 @@
+$Primary        : #07BEB8;
+$Secondary      : #3DCCC7;
+$Light          : #68D8D6;
+$Lighter        : #9CEAEF;
+$Lightest       : #C4FFF9;
+.form-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 90vh;
+    background-color: white;
+    margin-left: 5%;
+    border-radius: 15px;   
+    input{
+        width: 80%;
+        margin-top: 5%;
+        height: 10%;    
+        }
+}
+
+.input2{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input2 input{
+    justify-items: center;
+    margin-top: 10%;
+    width: 45%;
+    height: 40px;
+    
+}
+
+.message{
+    margin-top: 5%;
+    width: 80%;
+    margin-top: 5%;
+    height: 20%;
+    resize: none;
+}
+.button {
+    font-size: 18px;
+    width: 40%;
+    height: 10%;
+    margin-top: 10%;
+    color: white;
+    background-color: $Primary;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

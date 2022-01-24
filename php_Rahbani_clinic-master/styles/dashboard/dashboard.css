@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-dashboard {
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav-dashboard .nav-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  margin-left: -30px;
+  margin-bottom: 80px;
+}
+.nav-dashboard .nav-title .title {
+  font-family: "Montserrat";
+  font-size: 20px;
+}
+.nav-dashboard .nav-title .title::before {
+  content: "";
+  margin: 5 6 -3 0;
+  background-color: #07BEB8;
+  width: 5px;
+  height: 20px;
+  display: inline-block;
+}
+.nav-dashboard .admin-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.nav-dashboard .admin-img img {
+  width: 128px;
+  height: 128px;
+}
+.nav-dashboard .admin-img h2 {
+  font-family: "Montserrat";
+  margin: 0;
+  font-size: 17px;
+}
+.nav-dashboard .admin-img h3 {
+  font-family: "Montserrat";
+  color: #07BEB8;
+  font-size: 14px;
+}
+.nav-dashboard .operation-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav-dashboard .operation-menu ul {
+  margin-right: 20px;
+  padding: 0%;
+}
+.nav-dashboard .operation-menu ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 15px;
+  width: 160px;
+  height: 40px;
+  margin-bottom: 30px;
+  font-family: "Montserrat";
+  cursor: pointer;
+}
+.nav-dashboard .operation-menu ul li:hover {
+  background-color: #68D8D6;
+  border-radius: 2px;
+}
+.nav-dashboard .operation-menu ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+main {
+  width: 80%;
+  margin-left: auto;
+}
+main header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+main header .header-title {
+  margin-left: 30px;
+}
+main header .buttons {
+  margin-right: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main header .buttons .add {
+  padding: 0;
+  background-color: #07BEB8;
+  width: 170px;
+  height: 40px;
+  border: #07BEB8;
+  border-radius: 5px;
+  color: white;
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main header .buttons .logout {
+  margin-left: 30px;
+  padding: 0;
+  background-color: #07BEB8;
+  width: 170px;
+  height: 40px;
+  border: #07BEB8;
+  border-radius: 5px;
+  background-color: #C4C4C4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+main #data-table {
+  border-collapse: collapse;
+  margin: 35px 0;
+  font-size: 0.9em;
+  transform: scale(0.9);
+  background-color: #fafafa;
+  min-width: 768px;
+}
+main #data-table thead tr th {
+  font-weight: 100;
+  text-align: left;
+  padding: 12px;
+  width: 15%;
+}
+main #data-table tbody tr {
+  background-color: white;
+  border-radius: 30px;
+}
+main #data-table tbody tr td {
+  border: none;
+  padding: 18px 12px;
+  width: 15%;
+}
+main #data-table tbody tr td.icon {
+  padding: 0;
+  width: 4%;
+  cursor: pointer;
+}
+main #data-table tbody tr:first-child td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+main #data-table tbody tr:first-child td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+main #data-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+main #data-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+/*# sourceMappingURL=dashboard.css.map */

@@ -1,0 +1,79 @@
+main{
+    height: 600px;
+    width: 100%;
+    background-color: #ebebeb;
+    @include flexRow(space-around,center );
+    .img
+    {
+        height: 450px;
+        width: 462px;
+        min-width: 380px;
+        margin-top:auto;
+        @include flexColumn(flex-end,center );
+        img{
+            width: 100%;
+            height: auto;
+        }
+        @media (max-width: 768px){
+            min-width: 300px;
+            height: auto;
+            width: 100%;
+            max-width: 462px;
+        }
+
+    }
+    .heading{
+        margin-top: 5%;
+        margin-left: 5%;
+        @include flexColumn(center,flex-start );
+        .pre-heading{
+            color: $Primary;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        h1{
+            color: $Primary;
+            font-size: 96px;
+            font-weight: bolder;
+        }
+        .post-heading{
+            font-family: 'rooneysansregular';
+            font-size: 24px;
+            width: 80%;
+        }
+
+        @media (max-width: $medium){
+            margin-top:20% ;
+            align-items: center;
+            .pre-heading{
+                text-align: center;
+                margin: 2.5% 0;
+            }
+            h1{
+                font-size: 56px;
+                font-weight: bolder;
+                text-align: center;
+                 width: 60%;
+                 margin: 2.5% 0;
+            }
+            .post-heading{
+                text-align: center;
+                width: 90%;
+                margin: 2.5% 0;
+
+            }
+        }
+        @media (max-width: $medium){
+            
+            h1{
+                font-size: 46px;
+            }
+            
+        }
+
+    }
+    @media (max-width: 768px){
+        flex-direction: column;
+        height: auto;
+    }
+}

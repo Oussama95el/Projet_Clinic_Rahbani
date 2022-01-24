@@ -1,0 +1,47 @@
+$Primary        : #07BEB8;
+$Secondary      : #3DCCC7;
+$Light          : #68D8D6;
+$Lighter        : #9CEAEF;
+$Lightest       : #C4FFF9;
+
+$big    : 1124px;
+$medium : 768px;
+$small  : 480px;
+
+// flex & grid
+@mixin flexColumn($justify,$align) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flexRow($justify,$align) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin grid($column,$row){
+    display: grid;
+    grid-template-columns: repeat($column,1fr);
+    grid-template-rows: repeat($row,1fr);
+}
+
+@import 'form-contact';
+@import 'nav';
+@import 'hero-contact';
+@import 'footer';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+@media ($max_mobile) {
+    
+    
+}

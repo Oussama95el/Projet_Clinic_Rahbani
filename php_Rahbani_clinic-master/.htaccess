@@ -1,0 +1,9 @@
+Options All -Indexes
+
+RewriteEngine On
+
+RewriteBase /Rahbani_clinic/
+
+RewriteRule ^([-a-zA-Z0-9\_]+)$ index.php?page=$1
+
+

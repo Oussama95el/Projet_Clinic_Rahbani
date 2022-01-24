@@ -1,0 +1,63 @@
+<?php
+    
+
+    $data = new EmployesController();
+    $employes = $data->getAllEmployees();
+
+ ?>
+ 
+ <div &="container">
+     <div class="row">
+         <div class="col-md-8 mx-auto">
+               <div class="card">
+                   <div class="card-body bg-lite">
+                       <a href="<?php echo BASE_URL ?>add">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                        <table class="table table-hover">
+                        <thead>
+                            <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Birthday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach($employes as $employe): ?>
+                                <tr>
+                                <th scope="row"> <?php echo $employe['emp_id'] ?> </th>
+                                <td><?php echo $employe['name'] ?></td>
+                                <td><?php echo $employe['birthday'] ?></td>
+                                <td>
+                                    <form method="POST" action="update" class="mr-1">
+                                        <input type="hidden" name="id" value="<?php echo $employe['emp_id'] ?>">
+                                        
+                                        <button class="btn btn-sm btn-warning">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form method="POST" action="delete" class="mr-1">
+                                        <input type="hidden" name="id" value="<?php echo $employe['emp_id'] ?>">
+                                        
+                                        <button class="btn btn-sm btn-danger">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                                
+
+                                </tr>
+                                
+                            <?php endforeach; ?>
+                            
+                        </tbody>
+                        </table>
+                   </div>
+               </div>
+         </div>
+     </div>
+ </div>
+ 
+        

@@ -1,0 +1,59 @@
+// colors
+$Primary        : #07BEB8;
+$Secondary      : #3DCCC7;
+$Light          : #68D8D6;
+$Lighter        : #9CEAEF;
+$Lightest       : #C4FFF9;
+
+// sizes
+$big    : 1124px;
+$medium : 768px;
+$small  : 480px;
+
+// flex & grid
+@mixin flexColumn($justify,$align) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flexRow($justify,$align) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin grid($column,$row){
+    display: grid;
+    grid-template-columns: repeat($column,1fr);
+    grid-template-rows: repeat($row,1fr);
+}
+
+// general styles
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+// font
+@font-face {
+    font-family: 'rooneysansregular';
+    src: url('../../RooneySansFont/rooneysansregular-webfont.woff2') format('woff2'),
+         url('../../RooneySansFont/rooneysansregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// imports
+@import "nav";
+@import "hero";
+@import "section1";
+@import "section2";
+@import "section3";
+@import "footer";

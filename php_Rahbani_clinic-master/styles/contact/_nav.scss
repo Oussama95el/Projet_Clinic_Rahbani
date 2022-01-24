@@ -1,0 +1,115 @@
+#navbar{
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    .container{
+        width: auto;
+        margin:1% 5%;
+        flex-wrap: wrap;
+        @include flexRow(space-between, flex-start);
+        img{
+            width:51px;
+            height: 51px;
+            @media (max-width: 768px){
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .hamburger{
+            display: none;
+            position: relative;
+            z-index: 1;
+            user-select: none;
+            appearance: none;
+            border: none;
+            outline: none;
+            background: none;
+            cursor: pointer;
+            margin-top: inherit;
+           
+            &.is-active span:nth-child(1){
+                transform: translate(0px, -2px) rotate(45deg);
+                background-color: $Primary;
+            }
+            &.is-active span:nth-child(2){
+                opacity: 0;
+                transform: translateX(15px);
+            }
+            &.is-active span:nth-child(3){
+                transform: translate(-3px, 3px) rotate(-45deg);
+                background-color: $Primary;
+            }
+
+            span{
+                display: block;
+                height: 4px;
+                width: 33px;
+                margin-bottom: 5px;
+                position: relative;
+                border-radius: 6px;
+                background-color: $Primary;
+                z-index: 1;
+                transform-origin: 0 0;
+                transition: 0.4s;
+            }
+            @media (max-width: 768px){
+                display: block;
+            }
+
+        }
+        .menu {
+            margin-top: revert;
+            width: 50%;
+            
+            @include flexRow(flex-end,center);
+            .nav-item a{
+                color: black;
+                font-weight:500;
+                font-size: 18px;
+                margin-left: 16px;
+                transition: 0.4s;
+                border-radius: 99px;
+                padding: 8px 16px;
+                &.is-active{
+                    background-color:$Primary  ;
+                    color: white;
+                }
+            }
+            &.active{
+                @include flexColumn(center,center);
+                position: absolute;
+                z-index: -1;
+                background-color:white ;
+                height: 100vh;
+                width: 80%;
+                top: 0;
+                right: 0;
+                .nav-item {
+                    margin: 5% 0;
+                }
+               
+                
+            }
+            @media (max-width: 768px){
+                display: none;
+            }
+        }
+
+
+    }
+    @media (max-width: 768px){
+        height: 66px;
+    }
+}
+
+
+
+
+// body{
+//     background-color: black;
+//     height: 200vh;
+// }

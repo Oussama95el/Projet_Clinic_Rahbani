@@ -1,0 +1,110 @@
+.section-2{
+
+    background-image: url(../../images/trauma.jpg);
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    @include flexRow(flex-end,center);
+    position: relative;
+
+    .color-overlay{
+        width: 100%;
+        height: 500px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $Primary;
+        opacity: 31%;
+    }
+    .heading {
+        width: 100%;
+        padding:0 5%;
+        height: 100vh;
+        position: absolute;
+        color: white;
+        left: 0;
+        top: 0;
+        @include flexColumn(flex-start,center);
+        text-align: center;
+        margin-top: 6%;
+        h2{
+            margin: 20px;
+        }
+        img{
+            height: 59px;
+            width: 59px;
+        }
+        p{           
+             margin: 20px;
+             font-weight: bold;
+             font-size: 32px;
+             width: 55%;
+             @media (max-width:$small) {
+                 width: 75%;
+             }
+        }
+    }
+    .doctor-cards{
+        position: absolute;
+        top: 55%;
+        z-index: 10;
+        width: 100%;
+        height: 500px;
+        @include flexRow(space-around,center);
+        //flex-wrap: wrap;
+        .doc-card{
+            width: 354px;
+            height: 367px;
+            min-width: 200px;
+            min-height: auto;
+            background-color: #FAFAFA;
+            position: relative;
+            border-radius:6px; 
+            @include flexColumn(center, center);
+            img{
+                margin-bottom: 25%;
+                &.doc-1{
+                  width: auto;
+                  height: 260px;
+                  
+                }
+                &.doc-2{
+                    width: 202px;
+                    height: 268px;
+                }  
+                &.doc-3{
+                    width: 247px;
+                    height: 266px;
+                }
+                transition: all 0.4s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+            .doctor-card-heading{
+                background-color: $Secondary;
+                width: 100%;
+                height: 107px;
+                position: absolute;
+                bottom: 0;
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+                color: white;
+                @include flexColumn(center,center);
+                p{
+                    font-size: 24px;
+                }
+            }
+            @media (max-width: 768px){
+                margin: 5%;
+                width: 80vw;
+            }
+        }
+        @media (max-width: 768px){
+            flex-direction: column;
+            top: 140%;
+        }
+    }
+}
+
